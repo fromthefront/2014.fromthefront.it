@@ -1,0 +1,21 @@
+<header class="small-header">
+
+    <section id="banner" class="banner" role="banner">
+            <% link_to '/' do %>
+                <%= image_tag 'ftf14.svg', :alt => 'From the Front', 
+               :class => 'banner__img' %>
+            <% end %>
+    </section>
+
+    <section class="small-header__block">
+        <h1 class="small-header__title">
+            
+        </h1>
+    </section>
+
+    <a href="#tickets" class="getTicket">
+        <span class="getTicket__reminder"><%= t(:date) %> Bologna, <%= t(:italy) %></span><br>
+        grab your ticket now
+    </a>   
+
+</header>

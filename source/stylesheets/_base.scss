@@ -1,0 +1,44 @@
+html {
+    -webkit-overflow-scrolling: touch;
+    background:$black;
+    color:$lightYellow;
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+    background:$darkYellow;
+    @extend .column;
+    padding:0;
+    height:100%;
+}
+
+a, button { border: 0;  outline: 0; }
+
+.outern {
+    width: 100%;
+    overflow:hidden;
+}
+
+svg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-track:horizontal {
+    background:$grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $darkYellow;
+    box-shadow: inset 1px 0 0 $black;
+}

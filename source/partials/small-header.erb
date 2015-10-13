@@ -1,0 +1,19 @@
+<header class="small-header">
+    <div class="small-header__inner">
+        <section id="banner" class="banner" role="banner">
+                <% link_to '/' do %>
+                    <%= image_tag 'ftf14.svg', :alt => 'From the Front', 
+                   :class => 'banner__img' %>
+                <% end %>
+        </section>
+
+            
+        <h1 class="small-header__title">
+            <%= data.page.title %>
+        </h1>
+
+         
+        <a class="small-header__ticket button action__button small show-for-medium-up" href="#tickets" >grab your ticket now!</a>
+    </div>
+
+</header>

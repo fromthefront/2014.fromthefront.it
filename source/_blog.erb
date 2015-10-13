@@ -1,0 +1,10 @@
+<div class="row">
+  <% blog.articles[0...5].each do |article| %>
+    <article>
+      <h1>
+        <a href="<%= article.url %>"><%= article.title %></a>
+        <time><%= article.date.strftime('%b %e %Y') %></time>
+      </h1>
+    </article>
+  <% end %>
+</div>

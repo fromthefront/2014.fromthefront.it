@@ -1,0 +1,57 @@
+---
+title: Speakers
+---
+<article class="page">
+    <%= partial "partials/small-header" %>
+        <% blog(I18n.locale.to_s).articles.select {|a| a.tags.include?("speakers") }.each do |article| 
+        slug = article.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        %>
+
+
+        <article id="<%= slug %>" class="speakerblock clearfix">
+            <header class="speakerblock__header">
+                <div class="placeholder placeholder--speakerblock position-<%= article.data.position %>"></div>
+                <h1 class="speakerblock__title">
+                    <%= article.title %>
+                </h1>
+            
+
+                <div class="speakerblock__info clearfix row collapse">
+                    <p class="speakerblock__infoitem">
+                        <a href="http://twitter.com/<%= article.data.twitter %>" class="speaker-ongrid__twitter">@<%= article.data.twitter %></a>
+                    </p>
+                    <p class="speakerblock__infoitem">
+                        <span class="speakerblock__country">
+                            <%= article.data.country %> 
+                        </span>
+                    </p>
+                </div>
+            </header>
+
+
+            <% if article.tags.include?("abstract") %>
+                <div class="speakerblock__abstract">
+                    <h2 class="speakerblock__abstract-title">
+                        <%= article.data.talkTitle %>
+                    </h2>
+                    <div class="speakerblock__abstract-text">
+                        <%= article.body %>
+                    </div>
+                </div>
+            <% end %>
+
+            <div class="speakerblock__about">
+                <p class="speakerblock__biotext">
+                    <%= article.data.longbio %>
+                </p>
+            </div>
+
+        </article>
+    <% end %>
+</article>
+
+    <div class="bacarozzi">
+      <p class="bacarozzi__text">“The floor, it feels like I am walking on fortune cookies”</p>
+    </div>
+
+<%= partial "tickets" %>

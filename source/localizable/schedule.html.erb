@@ -1,0 +1,132 @@
+---
+title: Schedule
+---
+
+<!-- 
+Schedule:
+09:00 Registration
+10:00 Welcome
+10:15 talk
+11:00 talk
+11:45 talk
+
+12:25 lunch
+
+14:00 talk
+14:45 talk
+15:30 break
+16:00 talk
+16:45 talk
+
+21:00 party 
+-->
+
+
+
+<article class="page">
+    <%= partial "partials/small-header" %>
+    <div class="row">
+
+        <ul class="tabs tabs--schedule" data-tab role="tablist">
+            <li class="tab__title active" role="presentational" >
+                <a href="#sept-18" role="tab" tabindex="0" aria-selected="true" controls="sept-18">
+                    <%= t(:sept18) %>
+                </a>
+            </li>
+            <li class="tab__title" role="presentational" >
+                <a href="#sept-19" role="tab" tabindex="0" aria-selected="false" controls="sept-19">
+                    <%= t(:sept19) %>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tabs-content">
+            <section role="tabpanel" aria-hidden="false" id="sept-18" class="content active">
+                <div class="session__container large-8 large-centered">
+                    <% 
+                    articles = blog(I18n.locale.to_s).articles.select {|a| a.data.talkDate=='18' || a.data.talkDate=='both'}
+                    articles.sort_by {|a| a.data.talkTime }.each do |article| 
+                    slug = article.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')  
+                    %>
+                        <article class="session <% if article.tags.include?("networking") %>session--networking<% end %>">
+                            <time datetime="2014-09-<%= article.data.talkDate %> <%= article.data.talkTime %>" class="session__time">
+                                <span>
+                                    <%= article.data.talkTime %>
+                                </span>
+                            </time>
+                            
+                            <div class="session__img">
+                                <div class="placeholder position-<%= article.data.position %>"></div>
+                            </div>
+
+                            <div class="session__name">
+                                <%= article.title %>
+                                <% if article.tags.include?("abstract") %>
+                                    <h2 class="session__title session__title--talk">
+                                        <% if I18n.locale == :it %>
+                                            <a class="session__link" href="/it/speakers.html#<%= slug %>">
+                                        <% else %>
+                                            <a class="session__link" href="/speakers.html#<%= slug %>">
+                                        <% end %>    
+                                            <%= article.data.talkTitle %>
+                                        </a>
+                                    </h2>
+                                <% end %>
+                            </div>
+                        </article>
+                    <% end %>
+                </div>
+            </section>
+            
+            <section role="tabpanel" aria-hidden="true" id="sept-19" class="content">
+
+                <div class="session__container large-10 large-centered">
+                    <% 
+                    articles = blog(I18n.locale.to_s).articles.select {|a| a.data.talkDate=='19' || a.data.talkDate=='both'}
+                    articles.sort_by {|a| a.data.talkTime }.each do |article| 
+                    slug = article.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+                    %>
+                        <article class="session <% if article.tags.include?("networking") %>session--networking<% end %>">
+                            <time datetime="2014-09-<%= article.data.talkDate %> <%= article.data.talkTime %>" class="session__time">
+                                <span>
+                                    <%= article.data.talkTime %>
+                                </span>
+                            </time>
+                            
+                            <div class="session__img">
+                                <div class="placeholder position-<%= article.data.position %>"></div>
+                            </div>
+
+                            <div class="session__name">
+                                <%= article.title %>
+                                <% if article.tags.include?("abstract") %>
+                                    <h2 class="session__title session__title--talk">
+                                        <% if I18n.locale == :it %>
+                                            <a class="session__link" href="/it/speakers.html#<%= slug %>">
+                                        <% else %>
+                                            <a class="session__link" href="/speakers.html#<%= slug %>">
+                                        <% end %>    
+                                            <%= article.data.talkTitle %>
+                                        </a>
+                                    </h2>
+                                <% end %>
+                            </div>
+                        </article>
+                    <% end %>
+                </div>
+            </section>
+        
+           <!--  <div class="text-center backToTop">
+                <a href="#top" class="backTotop__button">
+                    <%= t(:backToTop) %>
+                </a>
+            </div> -->
+        </div> 
+    </div>
+</article>
+    
+    <div class="bacarozzi">
+      <p class="bacarozzi__text">“The floor, it feels like I am walking on fortune cookies”</p>
+    </div>
+
+<%= partial "tickets" %>

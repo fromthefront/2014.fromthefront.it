@@ -1,0 +1,70 @@
+<!doctype html>
+<html id="top" class="no-js" lang="<%= I18n.locale.to_s %>">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "From the Front" %></title>
+    
+    <%= stylesheet_link_tag 'app' %>
+
+    <!-- Prefetch DNS for external assets  -->
+    <link rel="dns-prefetch" href="//use.typekit.net">
+    <link rel="dns-prefetch" href="//getinvited.to">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//platform.twitter.com">
+    <link rel="dns-prefetch" href="//p.twitter.com">
+    <link rel="dns-prefetch" href="//cdn.api.twitter.com">
+    <link rel="dns-prefetch" href="//ssl.gstatic.com">
+    <link rel="dns-prefetch" href="//static.ak.fbcdn.net">
+    <link rel="dns-prefetch" href="//ssl.luckyorange.com ">
+
+    <!-- Favicon, Meta & other stuff -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:title" content="From the Front 2014">
+        <meta property="og:image" content="http://2014.fromthefront.it/images/share-6fcf291f.jpg">
+        <meta property="og:site_name" content="From the Front 2014">
+        <meta property="og:description" content="From the Front and the Temple of DOM | September 18th - 19th, 2014 Bologna, Italy">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://2014.fromthefront.it/">
+        <meta property="article:publisher" content="https://www.facebook.com/fromthefront">
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://2014.fromthefront.it/images/ftf14-4c7456ba.jpg">
+        <meta name="twitter:site" content="@fromthefront">
+        <meta name="twitter:creator" content="@fromthefront">
+
+        <!-- SEO meta -->
+        <meta name="description" content="From the Front and the Temple of DOM | September 18th - 19th, 2014 Bologna, Italy">
+        <meta name="keywords" content="Front-End, frontend, conference, bologna, fromthefront">
+        <link rel="canonical" href="http://2014.fromthefront.it/">
+
+
+    <!-- typekit scripts -->
+    <script>
+     (function(d) {
+    var config = {
+      kitId: 'eii0ybq',
+      scriptTimeout: 3000
+    },h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial "topbar" %>
+
+
+    <div class="outern">
+      <%= yield %>
+      <%= partial "footer" %>
+
+      <%= javascript_include_tag  "all" %>
+      <%= partial "analytics" %>
+    </div>
+  </body>
+</html>

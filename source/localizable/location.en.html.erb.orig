@@ -1,0 +1,61 @@
+---
+title: Location
+---
+
+
+<article class="page">
+    <%= partial "partials/small-header" %>
+    
+    <div class="relative">
+        <div class="map">
+            <img class="map__img" data-interchange="[images/map_small.jpg, (default)], [images/map_medium.jpg, (medium)], [images/map_large.jpg, (large)]"> <noscript><img src="images/map.jpg"></noscript>
+        </div>
+
+
+        <div class="intro">
+            <p class="intro__text">
+                Bologna is a lively and cosmopolitan italian city, with spectacular history, art, cuisine, music, and&nbsp;culture.</p>
+
+            <p class="intro__text">
+            Due to its central location and geography, Bologna has emerged as the main road and rail transport hub of northern Italy, making it very well-connected with other major Italian centers.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+
+        <article class="venue">
+            <header class="venue__header text-center">
+                <h2 class="venue__title">Teatro Duse</h2>
+            </header>
+
+            <div class="medium-flex">
+                <img class="venue__img" src="../images/venue1.jpg" alt="Inside Teatro Duse">
+
+                <div class="venue__inner">
+                    <p class="venue__text">The conference will take place at the inspiring Teatro Duse, a wonderful XVII century building recently renovated and for the conference day only we're providing an opt-in simultaneous translation service for everyone not comfortable with spoken English (mind to check the appropriate option during checkout).</p>
+
+                    <ul class="vcard venue__vcard">
+                        <li class="fn">Teatro Duse</li>
+                        <li class="street-address">via Cartoleria, 42 
+                            &mdash; <span class="locality">Bologna, <%= t(:italy) %></span>
+                        </li>
+<<<<<<< HEAD
+                        <!-- <li class="link"><a href="#">google maps</a></li> -->
+=======
+                        <li class="link"><a href="https://www.google.com/maps/place/Teatro+Duse/@44.4886445,11.34839,17z/data=!4m5!1m2!2m1!1steatro+duse+via+cartoleria+42+bologna!3m1!1s0x477fd4c724f32cb1:0x5095a6bf8e17de51?hl=it">google maps</a></li>
+>>>>>>> venue
+                    </ul>
+                </div>
+            </div>
+
+        </article>
+        
+    </div>
+</article>
+    
+ 
+    <div class="bacarozzi">
+      <p class="bacarozzi__text">“The floor, it feels like I am walking on fortune cookies”</p>
+    </div>
+
+<%= partial "tickets" %>

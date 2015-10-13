@@ -1,0 +1,194 @@
+@mixin speakerCol() {
+    @media #{$medium-up} {
+        padding-left:7.5rem;
+    }
+}
+
+@mixin speakerGrid() {
+    max-width:27rem;
+
+    @media #{$medium-up} {
+        max-width:36rem;
+    }
+
+    @media #{$large-up} {
+        max-width:55rem;
+    }
+    
+}
+
+.speakerblock {
+    position:relative;
+    @include grid-column(
+        $columns:12,
+        $center:true
+    );
+    @include speakerGrid();
+    margin: 3rem auto 3rem;
+
+    font-size:1rem;
+
+    @media #{$medium-up} {
+        margin: 7rem auto;
+    }
+}
+
+.speakerblock__title {
+    background-color: $black;
+    color:$white;
+    margin:2rem 0 0;
+    padding: 0.25rem 1rem .25rem 5.5rem;
+    font: {
+        size:rem-calc(18);
+        weight:400;
+    }
+    @media #{$medium-up} {
+        font-size:rem-calc(23);
+        padding: 0.25rem 0 .25rem 7.5rem;
+    }
+
+    @media #{$large-up} {
+        margin:1rem 0 0;
+        padding:0;
+        background-color:transparent;
+        text-align:center;
+        font-size:rem-calc(23);
+    }
+}
+
+.placeholder--speakerblock {
+    transform:scale(0.5);
+    &:before {
+        display:none;
+    }
+    @include position(absolute, top -1.5rem left -1.5rem);
+
+    @media #{$medium-up} {
+        transform:scale(0.75);
+        top: -1rem;
+    }
+
+    @media #{$large-up} {
+        transform:none;
+        top: -1rem;
+        @include position(relative, top 0 left 0);
+    }
+}
+
+.speakerblock__header {
+    @media #{$large-up} {
+        @include grid-column(
+            $columns:4
+        );
+    }
+}
+
+.speakerblock__info {
+    @include speakerCol();
+    margin-top:2rem;
+
+    @media #{$large-up} {
+        padding:0;
+        margin:0;
+        text-align:center;
+    }
+}
+
+.speakerblock__infoitem {
+    @include grid-column(6);
+
+    &:last-child {
+        text-align:right;
+    }
+
+    @media #{$large-up} {
+        float:none;
+        display:inline-block;
+        width:auto;
+    }
+}
+
+
+.speakerblock__twitter {
+    padding-left:5.5rem;
+    color:$red;
+
+    @media #{$medium-up} {
+        padding-left:0;
+        margin-bottom:0;
+    }
+}
+
+.speakerblock__country, 
+.speakerblock__biotext {
+    @extend .speaker-ongrid__info;
+    margin-bottom:0;
+    font-size:1rem;
+}
+
+
+
+
+.speakerblock__about {
+    @include speakerCol();
+    padding:0;
+    @media #{$large-up} {
+        margin-top:1rem;
+        @include grid-column(
+            $columns:8,
+            $float:right
+        );
+    }
+}
+
+
+.speakerblock__biotext {
+    line-height:1.4;
+    margin:0;
+    a {
+        color: $greyHound;
+    }
+
+    @media #{$large-up} {
+        font-size:rem-calc(18);
+    }
+}
+
+
+.speakerblock__abstract {
+    @include speakerCol();
+    @media #{$large-up} {
+        @include grid-column(
+            $columns:8,
+            $float:right
+        );
+        margin-top:1rem;
+    }
+
+    @include headings(2) {
+        text-transform:uppercase;
+        font-size:rem-calc(18);
+        line-height:1.2;
+        letter-spacing:1px;
+        font-weight:700;
+        color:$darkYellow;
+        @media #{$large-up} {
+            font-size:rem-calc(23);
+        }
+    }
+
+    span {
+        font-size:1rem;
+        color:$textGrey;
+        text-transform:uppercase;
+    }
+
+    p {
+        font-size:1rem;
+        line-height:1.4;
+
+        @media #{$large-up} {
+            font-size:rem-calc(18);
+        }
+    }
+}

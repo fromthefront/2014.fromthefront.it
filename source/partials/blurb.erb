@@ -1,0 +1,15 @@
+<article class="info info--blurb blurb">
+   <header class="blurb__header">
+        <%= image_tag 'ftf14.svg', :alt => 'Save the date!', 
+           :class => 'banner__img hide-for-large-up' %>
+            <h1 class="blurb__title">
+                Save the date
+            </h1>
+   </header>
+    <h2 class="info__title">Front-End Conference</h2>
+    <p class="info__when">September 18<sup>th</sup> - 19<sup>th</sup>, 2014</p>
+    <p class="info__where">Bologna, Italy</p>
+    <% link_to '/',  :fragment => 'tickets', :class => 'button action__button' do %>
+       grab your ticket now
+    <% end %>
+</article>

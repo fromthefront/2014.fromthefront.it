@@ -1,0 +1,57 @@
+.speaker-nav {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding:1rem 0;
+    height: 200px;
+    clear: both;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    text-align:center;
+    @media #{$medium-up} {
+        padding:2rem 0;
+        height: 230px;
+    }
+}
+
+.speaker-nav__item {
+    display:inline-block;
+}
+
+.placeholder--speaker-nav {
+    @media #{$medium-up} {
+        margin:0 1.5rem;
+    }
+    &:before {
+        display:none;
+    }   
+}
+
+.speaker-nav__item--active {
+    .placeholder {
+        box-shadow:0px 0px 0px 10px $red;
+    }
+}
+
+.speaker-nav__name {
+    color:$white;
+    font-size:rem-calc(14);
+    display:inline-block;
+    @media #{$medium-up} {
+        margin-top:1rem;
+        font-size:1rem;
+    }
+}
+
+// container 
+.nav-speaker__header {
+    @include speakerGrid();
+    margin:0rem auto;
+    padding:1rem 0 0;
+}
+
+.nav-speaker__title {
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:1px;
+}

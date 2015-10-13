@@ -1,0 +1,43 @@
+// top-bar style extension
+
+.top-bar-section__link {
+    letter-spacing: 1px;
+}
+.top-bar-section ul li > a {
+    color:$black;
+    @media #{$medium-up} {
+        color:$white;
+    }
+}
+.top-bar__img {
+    background: $lightYellow;
+    color:$black;
+    padding:5px 5px 3px;
+    height:45px;
+}
+
+.top-bar {
+    transition: height 300ms ease-in 0ms;
+}
+
+.top-bar--open {
+    height:260px;
+}
+
+.top-bar__toggle {
+    padding:0 25px 0 0 !important;
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 16px;
+        top: 0;
+        height: 0;
+        box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
+    }
+}
+
+.top-bar .toggle-topbar.menu-icon {
+    right:15px;
+}

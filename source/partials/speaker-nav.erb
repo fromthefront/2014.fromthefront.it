@@ -1,0 +1,28 @@
+<nav class="nav-speaker">
+    <div class="nav-speaker__header">
+        <h2 class="nav-speaker__title">
+            Speakers
+        </h2>
+    </div>
+
+    <ul class="speaker-nav">
+    <% blog(I18n.locale.to_s).articles.select {|a| a.tags.include?("speakers") }.each do |article| 
+      slug = article.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')  
+    %>
+
+    <% if article.data.position == current_page.data.position %>
+    <li class="speaker-nav__item speaker-nav__item--active">
+    <% else %>
+    <li class="speaker-nav__item">
+    <% end %>
+        <a href="../<%= current_page.data.lang %>/<%= slug %>.html" class="speaker-nav__link">
+            <div class="placeholder placeholder--speaker-nav position-<%= article.data.position %>"></div>
+            <span class="speaker-nav__name text-center">
+              <%= article.title %>
+            </span>
+        </a>
+    </li>
+
+    <% end %>
+    </ul>
+</nav>

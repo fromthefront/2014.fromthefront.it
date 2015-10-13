@@ -1,0 +1,12 @@
+/*!
+ * VERSION: 1.7.3
+ * DATE: 2014-01-14
+ * UPDATES AND DOCS AT: http://www.greensock.com
+ *
+ * @license Copyright (c) 2008-2014, GreenSock. All rights reserved.
+ * This work is subject to the terms at http://www.greensock.com/terms_of_use.html or for
+ * Club GreenSock members, the software agreement that was issued with your membership.
+ * 
+ * @author: Jack Doyle, jack@greensock.com
+ **/
+(window._gsQueue||(window._gsQueue=[])).push(function(){"use strict";var t=document.documentElement,s=window,i=function(i,e){var h="x"===e?"Width":"Height",l="scroll"+h,o="client"+h,r=document.body;return i===s||i===t||i===r?Math.max(t[l],r[l])-(s["inner"+h]||Math.max(t[o],r[o])):i[l]-i["offset"+h]},e=window._gsDefine.plugin({propName:"scrollTo",API:2,version:"1.7.3",init:function(t,e,h){return this._wdw=t===s,this._target=t,this._tween=h,"object"!=typeof e&&(e={y:e}),this._autoKill=e.autoKill!==!1,this.x=this.xPrev=this.getX(),this.y=this.yPrev=this.getY(),null!=e.x?(this._addTween(this,"x",this.x,"max"===e.x?i(t,"x"):e.x,"scrollTo_x",!0),this._overwriteProps.push("scrollTo_x")):this.skipX=!0,null!=e.y?(this._addTween(this,"y",this.y,"max"===e.y?i(t,"y"):e.y,"scrollTo_y",!0),this._overwriteProps.push("scrollTo_y")):this.skipY=!0,!0},set:function(t){this._super.setRatio.call(this,t);var e=this._wdw||!this.skipX?this.getX():this.xPrev,h=this._wdw||!this.skipY?this.getY():this.yPrev,l=h-this.yPrev,o=e-this.xPrev;this._autoKill&&(!this.skipX&&(o>7||-7>o)&&e<i(this._target,"x")&&(this.skipX=!0),!this.skipY&&(l>7||-7>l)&&h<i(this._target,"y")&&(this.skipY=!0),this.skipX&&this.skipY&&this._tween.kill()),this._wdw?s.scrollTo(this.skipX?e:this.x,this.skipY?h:this.y):(this.skipY||(this._target.scrollTop=this.y),this.skipX||(this._target.scrollLeft=this.x)),this.xPrev=this.x,this.yPrev=this.y}}),h=e.prototype;e.max=i,h.getX=function(){return this._wdw?null!=s.pageXOffset?s.pageXOffset:null!=t.scrollLeft?t.scrollLeft:document.body.scrollLeft:this._target.scrollLeft},h.getY=function(){return this._wdw?null!=s.pageYOffset?s.pageYOffset:null!=t.scrollTop?t.scrollTop:document.body.scrollTop:this._target.scrollTop},h._kill=function(t){return t.scrollTo_x&&(this.skipX=!0),t.scrollTo_y&&(this.skipY=!0),this._super._kill.call(this,t)}}),window._gsDefine&&window._gsQueue.pop()();

@@ -1,0 +1,734 @@
+<!doctype html>
+<html id="top" class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>From the Front and the Temple of DOM</title>
+
+    <link href="stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- Prefetch DNS for external assets  -->
+    <link rel="dns-prefetch" href="//use.typekit.net">
+    <link rel="dns-prefetch" href="//getinvited.to">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//platform.twitter.com">
+    <link rel="dns-prefetch" href="//p.twitter.com">
+    <link rel="dns-prefetch" href="//cdn.api.twitter.com">
+    <link rel="dns-prefetch" href="//ssl.gstatic.com">
+    <link rel="dns-prefetch" href="//static.ak.fbcdn.net">
+    <link rel="dns-prefetch" href="//ssl.luckyorange.com ">
+
+    <!-- Favicon, Meta & other stuff -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:title" content="From the Front 2014">
+        <meta property="og:image" content="http://2014.fromthefront.it/images/share-6fcf291f.jpg">
+        <meta property="og:site_name" content="From the Front 2014">
+        <meta property="og:description" content="From the Front and the Temple of DOM | September 18th - 19th, 2014 Bologna, Italy">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://2014.fromthefront.it/">
+        <meta property="article:publisher" content="https://www.facebook.com/fromthefront">
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://2014.fromthefront.it/images/ftf14-4c7456ba.jpg">
+        <meta name="twitter:site" content="@fromthefront">
+        <meta name="twitter:creator" content="@fromthefront">
+
+        <!-- SEO meta -->
+        <meta name="description" content="From the Front and the Temple of DOM | September 18th - 19th, 2014 Bologna, Italy">
+        <meta name="keywords" content="Front-End, frontend, conference, bologna, fromthefront">
+        <link rel="canonical" href="http://2014.fromthefront.it/">
+
+
+    <!-- typekit scripts -->
+    <script>
+    (function(d) {
+    var config = {
+      kitId: 'eii0ybq',
+      scriptTimeout: 3000
+    },h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+  </head>
+
+  <body class="index">
+
+    <style>
+
+.newsite, .spacer{
+  position: fixed; text-align: center; z-index: 10000; width: 100%;
+   text-align:center; font-size:140%;top:0;
+  background:#F6B323;
+  padding:20px 0;
+}
+.newsite a {
+  color:#000;text-decoration: underline;
+}
+.newsite a:hover {
+  color: #c9450d!important;
+}
+.spacer {
+  position: relative;
+  visibility: hidden;
+}
+</style>
+<div class="spacer">
+  You're gonna get killed chasing after your damn fortune and glory! <span>Maybe. But not today.</span>
+</div>
+
+<div class="newsite">
+  You're gonna get killed chasing after your damn fortune and glory! <a href="http://2015.fromthefront.it">Maybe. But not today.</a>
+</div>
+
+<nav class="top-bar" id="top-bar">
+  <ul class="title-area">
+    <li class="name">
+    <a href="/">
+            <img alt="From the Front" class="top-bar__img" src="images/ftf-square-black.png" />
+        </a>
+    </li>
+    <li class="toggle-topbar menu-icon"><a id="top-bar__toggle" class="top-bar__toggle" href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- left Nav Section -->
+    <ul class="left">
+      <li class="top-bar-section__item">
+        
+          <a href="/">
+        
+          Home
+        </a>
+      </li>
+
+      <li class="top-bar-section__item">
+        
+          <a href="/speakers.html">
+        
+            Speakers
+          </a>
+      </li>
+
+       <li class="top-bar-section__item">
+        
+          <a href="/schedule.html">
+        
+            Schedule
+          </a>
+      </li>
+
+      <li class="top-bar-section__item">
+        
+          <a href="/location.html">
+        
+            Location
+          </a>
+      </li>
+
+      <li class="top-bar-section__item">
+        <a class="top-bar-section__link" href="#tickets">
+          Tickets
+        </a>
+      </li>
+
+    </ul>
+
+  </section>
+</nav>
+
+    <div class="outern">
+      <div class="opening__wrapper">
+    <section class="opening bokeh-bg with-mountains">
+    
+        <header class="large-head">
+            <section id="banner" class="banner">
+    <h1 class="banner_heading">
+        <a href="/">
+           <img class="banner__img" src="../images/ftf14.svg" alt="From the Front and the Temple of DOM">
+        </a>
+    </h1>
+</section>
+
+            <section class="info">
+                <h2 class="info__title">Front-End Conference</h2>
+                <p class="info__when">September 18<sup>th</sup> - 19<sup>th</sup>, 2014</p>
+                <p class="info__where">Teatro Duse, Bologna, Italy</p>
+            </section>
+        </header>
+
+        <div class="super-plane">
+    <div id="plane-container" class="plane-container">
+    <svg version="1.1" id="plane" class="plane shake-constant shake" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 270 100" enable-background="new 0 0 270 100" xml:space="preserve">
+
+        <g id="plane_body" class="plane__body">
+            <g>
+                <path d="M55.2,38.4c-8-7.1-15.3-13.7-22.7-19.9c-1.2-1.2-3.6-1.5-5.6-1.5c-7.1-0.3-14.3,0-21.4-0.3c-1.6,0-3-2.3-4.6-3.3
+                    c1.6-1,3.3-3,4.9-3c32.3-0.8,65.4-0.5,98.8-0.5c-2.8,4.4-5.4,7.7-11,6.9c-6.3-1-11.2,1.6-15.8,6.1C72.3,28.1,66.4,33.1,60,38.7
+                    c8.2,7.1,15.8,14,24,20.9c1,1,3.8,0.3,4.6,1.3c1.3,1.8,2.5,4.4,2,6.1C89,73.9,87,80.5,85,86.9c-0.5,1.6-2.3,2.5-3.6,3.8
+                    c-0.3-1.8-1.3-3.6-1-5.4c1.3-5.8,3-11.7,4.6-18.3c-2.3,0-4.1,0-5.8,0c-23.7,0-47.8,0-71.5,0c-1.3,0-2.5,0.3-3.6,0
+                    c-1.6-0.8-2.5-2-4.1-3c1.3-1.3,2.5-3.6,4.1-3.6c6.6-0.5,13.2-0.5,19.9,0c4.5,0.2,7.8-1.4,11.1-4.2C41.7,49.9,48.3,44.6,55.2,38.4
+                    z M79.4,59.8c-7.9-6.9-14.5-13-21.6-19c-7.1,6.3-14,12.3-21.4,19.1C50.8,59.8,64.4,59.8,79.4,59.8z M79.2,16.9
+                    c-14.8,0-28.3,0-43.2,0c7.6,6.9,14.5,13,21.7,19.1C64.9,29.7,71.5,23.5,79.2,16.9z"/>
+                <path d="M216.2,38.4c7.9,7.1,15.3,13.7,22.7,20.2c1.3,1,3.3,1.6,5.1,1.6c6.9,0.3,13.5,0,20.4,0c2.5,0,5.8,0,5.1,3.6
+                    c-0.3,1.3-3.3,3-5.1,3c-24.3,0.3-48.8,0.3-73.1,0.3c-1.8,0-3.8,0-6.3,0c1.6,6.1,3,11.7,4.4,17.3c0.3,1.3,0.8,2.3,0.8,3.6
+                    c0,1-0.8,2.5-1.6,2.5c-0.8,0.3-2.5-0.5-2.8-1.3c-2.3-7.7-4.9-15.6-6.6-23.5c-0.5-2,0.3-5.8,4.9-5.8c1.6,0,3.3-0.8,4.4-1.8
+                    c7.4-6.3,14.5-12.8,22.4-19.7c-8.3-7-15.9-14.2-24.4-20.8c-1.8-1.6-5.6-0.8-8.4-0.8c-7.1,0-7.1,0-12.3-6.9c1.8,0,3,0,4.4,0
+                    c31.1,0,62.3,0,93.4,0c0.8,0,1.8-0.3,2.5,0c1.3,1,2.5,2,3.8,3.3c-1.3,1-2.3,3-3.6,3.3c-5.8,0.3-11.5,0.5-17.3,0
+                    c-5.8-0.5-10.2,1.3-14.5,5.6C229,27.6,223,32.6,216.2,38.4z M192.1,59.8c14.8,0,28.3,0,43.2,0c-7.7-6.9-14.5-13.1-21.7-19.1
+                    C206.6,46.8,200,52.9,192.1,59.8z M213.7,36.1c7.2-6.3,14-12.5,21.2-18.8c-14.8,0-28.3,0-42.7,0C200,23.5,206.6,29.7,213.7,36.1z
+                    "/>
+                <path d="M78.1,91.4c-2.5,0-4.4,0-6.9,0c0-3-0.3-6.1,0.3-9c0.3-1.3,2.5-3.3,3.3-3c1.3,0.3,3,2,3.3,3.6
+                    C78.4,85.6,78.1,88.4,78.1,91.4z"/>
+                <path d="M192.6,91.2c0-3-0.5-5.8,0.3-8.4c0.3-1.3,2.3-2.5,3.3-3.6c1.3,1.3,3,2.3,3.3,3.8c0.5,2.5,0.3,5.4,0.3,8.2
+                    C197.1,91.2,195.4,91.2,192.6,91.2z"/>
+                <path d="M78.4,96.1c-1.3,1-2.5,3-3.8,3c-1.3,0-2.5-2-3.8-3.3c0.3-0.3,0.5-0.8,0.8-1c2,0,3.8,0,5.8,0C77.6,95,78.1,95.5,78.4,96.1
+                    z"/>
+                <path d="M200,96.1c-1.3,1-2.5,3-3.8,3s-2.5-2-3.8-3.3c0.3-0.3,0.5-0.8,0.8-1c2,0,3.8,0,5.8,0C199.2,95,199.7,95.5,200,96.1z"/>
+                <path d="M161.6,59.8c3,0.3,6.1,0.3,9.2,0.5c-0.5,4.6-2.3,6.9-7.4,6.9c-18.6-0.3-37.3-0.3-55.9,0c-5.1,0-6.9-2-7.9-6.9
+                    c3-0.3,6.1-0.3,9.4-0.5c-4.6-15.2-1.8-27.7,12-36.5c9.2-5.8,21.9-5.1,30.6,1.3C162.7,32.6,165.5,42.7,161.6,59.8z"/>
+                <path d="M157.8,16.1c-15.3,0-29.6,0-44.2,0C121.4,7,146.6,6.7,157.8,16.1z"/>
+            </g>
+        </g>
+        <!-- <g id="helix" class="plane__helix" transform="rotate(0, 135, 47)"> -->
+        <g id="helix" class="plane__helix">
+            <path d="M180.4,43.8c-1.3-23.2-19.9-41.9-43.2-43.2c-0.8,0-1.8-0.3-2.5-0.3c-0.8,0-2.5,0-2.5,0.3v43.2H88.9c0,2.5,0,3.9,0,5
+                C90.2,72,108.8,90.7,132.1,92c0.8,0,1.8,0.3,2.5,0.3c0.8,0,2.5,0,2.5-0.3V48.8h39.2h4.4C180.7,48.8,180.4,45,180.4,43.8z M93,48.8
+                h39.2V88C111.7,86.7,94.3,71.8,93,48.8z M137.2,43.8V4.6c20.4,1.3,37.8,18.6,39.2,39.2H137.2z"/>
+            <path opacity="0.6" d="M93,48.8h39.2V88C111.7,86.7,94.3,71.8,93,48.8z"/>
+            <path opacity="0.6" d="M137.2,43.8V4.6c20.4,1.3,37.8,18.6,39.2,39.2H137.2z"/>
+        </g>
+    </svg>
+</div>
+</div>
+        <section class="message">
+            <h2 class="message__title">
+                we are working hard<br>
+                <strong>to welcome you once again</strong>
+            </h2>
+        </section>
+        <div class="action">
+
+            <a class="button action__button" href="#tickets">get your ticket!</a>
+            <div class="social-buttons">
+                <!-- FACEBOOK -->
+        <span style="height: 20px; width: 80px; margin-right:5px">
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F2014.fromthefront.it&amp;width=80&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=20&amp;appId=351282064925439"scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:20px;" allowTransparency="true"></iframe></span>
+
+
+<!-- TWITTER -->
+        <iframe scrolling="no" frameborder="0" id="twitter-widget-0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.1390956745.html#_=1391613664956&amp;count=horizontal&amp;hashtags=ftf14&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2F2014.fromthefront.it%2F&amp;size=m&amp;text=From%20The%20Front%2C%20September%2018th%2F19th%2C%202014%20in%20Bologna%2C%20Italy&amp;url=http%3A%2F%2F2014.fromthefront.it" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 90px; height: 20px;"></iframe>
+
+<!-- GOOGLE PLUS -->
+        <iframe width="100%" scrolling="no" frameborder="0" hspace="0" marginheight="0" marginwidth="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I0_1391613664977" name="I0_1391613664977" src="https://apis.google.com/u/0/_/+1/fastbutton?usegapi=1&amp;bsv=o&amp;size=medium&amp;origin=http%3A%2F%2F2014.fromthefront.it&amp;url=http%3A%2F%2F2014.fromthefront.it%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.it.CAGcSzCDRxQ.O%2Fm%3D__features__%2Fam%3DIQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAItRSTN2qIZCZGIBPAPH_ZSc27bEP1-xDA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1391613664977&amp;parent=http%3A%2F%2F2014.fromthefront.it&amp;pfname=&amp;rpctoken=27997022" data-gapiattached="true" title="+1"></iframe>
+ 
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<article class="homespeakers">
+    <div class="row homespeakers__inner">
+    <header class="homespeakers__header">
+    <div class="ribbon">
+      <h1 class="homespeakers__inner ribbon__content"><span class="homespeakers__small">conference</span><br> starring</h1>
+    </div>
+      <p class="homespeakers__when">thursday 18<sup>th</sup> & friday 19<sup>th</sup></p>
+      <p class="homespeakers__what"><strong>2 full days</strong> of conference, <strong>14</strong>&nbsp;speakers</p>
+    </header>
+        <ul class="speaker-grid">
+            
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#christian-heilmann">
+                  
+                    <div class="placeholder position-1"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Christian Heilmann
+                      </h2>
+                      <p class="speaker-ongrid__info"><a href="http://www.mozilla.org">Mozilla</a> developer evangelist</p>
+                      <a href="http://twitter.com/codepo8" class="speaker-ongrid__twitter">@codepo8</a>
+                      <p class="speaker-ongrid__info">&ndash; USA &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#estelle-weyl">
+                  
+                    <div class="placeholder position-2"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Estelle Weyl
+                      </h2>
+                      <p class="speaker-ongrid__info">Front End Developer, teacher, author, <a href="http://standardista.com/">standardista</a>.</p>
+                      <a href="http://twitter.com/estellevw" class="speaker-ongrid__twitter">@estellevw</a>
+                      <p class="speaker-ongrid__info">&ndash; USA &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#jeremy-keith">
+                  
+                    <div class="placeholder position-3"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Jeremy Keith
+                      </h2>
+                      <p class="speaker-ongrid__info">An Irish web developer working with <a href="http://clearleft.com/">Clearleft</a> curating <a href="http://2014.dconstruct.org/">dConstruct</a>.</p>
+                      <a href="http://twitter.com/adactio" class="speaker-ongrid__twitter">@adactio</a>
+                      <p class="speaker-ongrid__info">&ndash; UK &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#jenn-lukas">
+                  
+                    <div class="placeholder position-4"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Jenn Lukas
+                      </h2>
+                      <p class="speaker-ongrid__info">Front-end dev, teacher, co-host <a href="http://ladiesintech.com/">Ladies in Tech</a></p>
+                      <a href="http://twitter.com/JennLukas" class="speaker-ongrid__twitter">@JennLukas</a>
+                      <p class="speaker-ongrid__info">&ndash; USA &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#peter-gasston">
+                  
+                    <div class="placeholder position-5"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Peter Gasston
+                      </h2>
+                      <p class="speaker-ongrid__info">Technologist and front-end lead at <a href="rehabstudio.com">rehabstudio</a></p>
+                      <a href="http://twitter.com/stopsatgreen" class="speaker-ongrid__twitter">@stopsatgreen</a>
+                      <p class="speaker-ongrid__info">&ndash; UK &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#owen-gregory">
+                  
+                    <div class="placeholder position-6"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Owen Gregory
+                      </h2>
+                      <p class="speaker-ongrid__info">Editor and copy editor at <a href="http://fullcreammilk.co.uk/">Full Cream Milk</a></p>
+                      <a href="http://twitter.com/fullcreammilk" class="speaker-ongrid__twitter">@fullcreammilk</a>
+                      <p class="speaker-ongrid__info">&ndash; UK &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#jon-gold">
+                  
+                    <div class="placeholder position-7"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Jon Gold
+                      </h2>
+                      <p class="speaker-ongrid__info">Full-stack Designer, Full-stack Developer</p>
+                      <a href="http://twitter.com/JonGold" class="speaker-ongrid__twitter">@JonGold</a>
+                      <p class="speaker-ongrid__info">&ndash; UK &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#nicolas-bevacqua">
+                  
+                    <div class="placeholder position-8"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Nicolas Bevacqua
+                      </h2>
+                      <p class="speaker-ongrid__info">Full-stack developer based in Buenos Aires, author</p>
+                      <a href="http://twitter.com/nzgb" class="speaker-ongrid__twitter">@nzgb</a>
+                      <p class="speaker-ongrid__info">&ndash; Argentina &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#andre-jay-meissner">
+                  
+                    <div class="placeholder position-9"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Andre Jay Meissner
+                      </h2>
+                      <p class="speaker-ongrid__info">Fuelling <a href="http://opendevicelab.com/">OpenDeviceLab.com</a>, currently working at Adobe</p>
+                      <a href="http://twitter.com/klick_ass" class="speaker-ongrid__twitter">@klick_ass</a>
+                      <p class="speaker-ongrid__info">&ndash; Germany &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#sara-soueidan">
+                  
+                    <div class="placeholder position-10"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Sara Soueidan
+                      </h2>
+                      <p class="speaker-ongrid__info">Front-end dev, author and team member at <a href="http://tympanus.net/codrops/">Codrops</a></p>
+                      <a href="http://twitter.com/SaraSoueidan" class="speaker-ongrid__twitter">@SaraSoueidan</a>
+                      <p class="speaker-ongrid__info">&ndash; Lebanon &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#stuart-robson">
+                  
+                    <div class="placeholder position-11"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Stuart Robson
+                      </h2>
+                      <p class="speaker-ongrid__info">Front-end developer, curator of <a href="https://twitter.com/SassNews">SassNews</a>, buzzword antagonist</p>
+                      <a href="http://twitter.com/StuRobson" class="speaker-ongrid__twitter">@StuRobson</a>
+                      <p class="speaker-ongrid__info">&ndash; UK &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#ulrika-malmgren">
+                  
+                    <div class="placeholder position-12"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Ulrika Malmgren
+                      </h2>
+                      <p class="speaker-ongrid__info">QA expert and testing passionate. She holds courses, seminars and presentations about Agile Testing</p>
+                      <a href="http://twitter.com/Ulrikama" class="speaker-ongrid__twitter">@Ulrikama</a>
+                      <p class="speaker-ongrid__info">&ndash; Sweden &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#sally-jenkinson">
+                  
+                    <div class="placeholder position-13"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Sally Jenkinson
+                      </h2>
+                      <p class="speaker-ongrid__info">Technical consultant and solutions architect</p>
+                      <a href="http://twitter.com/sJenkinson" class="speaker-ongrid__twitter">@sJenkinson</a>
+                      <p class="speaker-ongrid__info">&ndash; UK &ndash;</p>
+                  
+              </li>
+              
+              <li class="speaker-ongrid">
+                  
+                    <a href="/speakers.html#gunnar-bittersmann">
+                  
+                    <div class="placeholder position-14"></div>
+                  </a>
+                  
+                      <h2 class="speaker-ongrid__name">
+                          Gunnar Bittersmann
+                      </h2>
+                      <p class="speaker-ongrid__info">Web developer, user advocate, guitar player</p>
+                      <a href="http://twitter.com/g16n" class="speaker-ongrid__twitter">@g16n</a>
+                      <p class="speaker-ongrid__info">&ndash; Germany &ndash;</p>
+                  
+              </li>
+              
+        </ul>
+    </div>
+</article>
+<div class="bacarozzi">
+  <p class="bacarozzi__text">“The floor, it feels like I am walking on fortune cookies”</p>
+</div>
+ 
+
+<section class="ticketab__section">
+    <div class="row">
+        <section class="ufo-aside">
+            <h2 class="history__title">A BRIEF HISTORY</h2>
+
+<div class="edition">
+    <a href="http://2013.fromthefront.it" class="edition__link edition--2013">
+    </a>
+    <span class="edition__year">
+        <a class="edition__text-link" href="http://2013.fromthefront.it">2013</a>
+    </span>
+</div>
+
+<div class="edition">
+    <a href="http://2012.fromthefront.it" class="edition__link edition--2012">
+    </a>
+    <span class="edition__year">
+        <a class="edition__text-link" href="http://2012.fromthefront.it">2012</a>
+    </span>
+</div>
+
+<div class="edition">
+    <a href="http://2011.fromthefront.it" class="edition__link edition--2011">
+    </a>
+    <span class="edition__year">
+        <a class="edition__text-link" href="http://2011.fromthefront.it">2011</a>
+    </span>
+</div>
+        </section>
+        <article class="ticketab">
+           <div class="ticketab__inner">
+                <header class="ticketab__header">
+                    <h1 class="ticketab__title">Last chance to get your ticket!</h1>
+               </header>
+                <p class="ticketab__text">In a few days we will be on stage at Teatro Duse, in Bologna, if you want to join us it's time to buy your ticket.<br/> <small>All the tickets includes breakfast, lunch and access to the party venue</small></p>
+           </div>
+            <table class="ticketable">
+                <thead class="ticketable__head">
+                    <tr>
+                      <th class="ticketable__heads"></th>
+                      <th class="ticketable__heads head--singleday">single day *</th>
+                      <th class="ticketable__heads head--twodays">conf. pass</th>
+                      <th class="ticketable__heads">available</th>
+                    </tr>
+                </thead>
+                <tbody class="ticketable__body">
+                    <tr class="ticketable__row">
+                        <td class="ticketable__first"><s>blind bird</s></td>
+                        <td>&mdash;</td>
+                        <td><s>€70</s></td>
+                        <td>sold out</td>
+                    </tr>
+                    <tr class="ticketable__row">
+                        <td class="ticketable__first"><s>early bird</s></td>
+                        <td>&mdash;</td>
+                        <td><s>€100</s></td>
+                        <td>sold out</td>
+                    </tr>
+                    <tr class="ticketable__row">
+                        <td class="ticketable__first">regular ticket</td>
+                        <td><s>€105<s></td>
+                        <td><s>€130</s></td>
+                        <td>sold out</td>
+                    </tr>
+                    <tr class="ticketable__row">
+                        <td class="ticketable__first">late bird</td>
+                        <td>€135</td>
+                        <td>€160</td>
+                        <td>Aug &ndash; Sep</td>
+                    </tr>
+                </tbody>
+                <tfoot class="ticketable__footer">
+                    <tr>
+                        <td class="ticketable__notes" colspan="4">
+                         All prices are VAT 22% excluded. If your VAT number is genuinely registered in an EU country get in touch after buying the ticket to receive a refund and a credit note for the charged VAT. All sales are final.<br /><br class="show-for-medium-up" />(*) You will be able to enter just one of the two days of conference; buy now, and choose which one on the event days.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+    </div>
+</section>
+
+<section id="tickets" class="tickets">
+    <div class="tickets__inner">
+        <h1 class="tickets__title">
+            get your ticket
+        </h1>
+
+        <p class="ticket__message">If you're a student, <a class="ticket__link" href="http://fromthefront.wufoo.com/forms/z7x3k7/" onclick="winOpen(this); return false" >get in touch</a> before buying. We have a special ticket for you :)</p>
+
+        <div class="ticket__form">
+            <script src="https://getinvited.to/js/fromthefront/from-the-front-2014/" id="script-fromthefront-from-the-front-2014"></script>
+        </div>
+    </div>
+</section>
+
+<section class="sponsors">
+    <header class="sponsors__header">
+        <h2 class="sponsors__title">
+            Available treasures
+        </h2>
+        <p class="sponsors__subtitle">
+            Yep, they're the sponsors
+        </p>
+    </header>
+
+    <section class="row sponsor__container sponsor__container--main">
+        <h2 class="sponsor__container__title">
+            Crystal Skull
+        </h2>
+        <article class="sponsor sponsor--main">
+            <a href="http://mozilla.org" class="sponsor__link">
+                <h2>
+                    <img src="../images/mozilla.png" alt="Mozilla" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+        <article class="sponsor sponsor--main">
+            <a href="http://mailchimp.com" class="sponsor__link">
+                <h2>
+                    <img src="../images/mailchimp_logo.png" alt="Mailchimp" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+    </section>
+
+    <section class="row sponsor__container sponsor__container--secondary">
+        <h2 class="sponsor__container__title">
+            Sankara stones
+        </h2>
+
+        <article class="sponsor sponsor--secondary">
+            <a href="http://airbrake.io/" class="sponsor__link">
+                <h2>
+                    <img src="../images/airbrake_logo.png" alt="Airbrake" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+
+        <article class="sponsor sponsor--secondary">
+            <a href="http://mailjet.com/" class="sponsor__link">
+                <h2>
+                    <img src="../images/mailjet_logo.png" alt="MailJet" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+
+        <article class="sponsor sponsor--secondary">
+            <a href="http://proto.io/" class="sponsor__link">
+                <h2>
+                    <img src="../images/protoio_logo.png" alt="Proto.io" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+
+        <article class="sponsor sponsor--secondary">
+            <a href="http://www.gnvpartners.com/" class="sponsor__link">
+                <h2>
+                    <img src="../images/gnv_logo.png" alt="GNV & Partners" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+
+        <article class="sponsor sponsor--secondary">
+            <a href="http://mced.it/" class="sponsor__link">
+                <h2>
+                    <img src="../images/mced_logo.png" alt="MCED" class="sponsor__logo">
+                </h2>
+            </a>
+        </article>
+
+    </section>
+
+    <p class="sponsors__message">Interested in being a sponsor for 2014?<br>Feel free to&nbsp;<a  href="http://fromthefront.wufoo.com/forms/z7x3k7/" onclick="winOpen(this); return false" >contact us</a></p>
+
+</section>
+<section class="newsletter">
+    <h2 class="newsletter__title">Stay in the loop</h2>
+    <form action="http://fromthefront.us2.list-manage1.com/subscribe/post?u=918f93d8162db7b50cc604d8f&amp;id=c35fd91fa3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate nl-form" target="_blank" novalidate>       
+        <div class="nl-form__inner row collapse">
+            <div class="nl-form__input">
+              <input type="email" placeholder="email" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            <div class="nl-form__action">
+              <button class="button postfix nl-form__button">
+                <i class="nl-form__icon icon-arrow-right"></i>
+              </button>
+            </div>
+
+        </div>
+    </form>
+
+    <h2 class="follow__title">follow us</h2>
+    <ul class="socials">
+        <li class="social__item">
+            <a href="https://www.facebook.com/fromthefront" class="social__link">
+                <i class="social__icon icon-facebook"></i>
+            </a>
+        </li>
+        <li class="social__item">
+            <a href="https://twitter.com/fromthefront" class="social__link">
+                <i class="social__icon icon-twitter"></i>
+            </a>
+        </li>
+        <li class="social__item">
+            <a href="http://vimeo.com/fromthefront" class="social__link">
+                <i class="social__icon icon-vimeo"></i>
+            </a>
+        </li>
+    </ul>
+
+</section>
+
+
+
+
+
+
+      <footer class="footer" role="contentinfo">
+    <div class="row footer__inner">
+        <div class="footer__section footer--left ftf">
+            <img class="ftf__logo" src="../images/logo_ftf.png" alt="From the Front Logo">
+            <div class="ftf__text">
+                <p class="ftf__text-item">Associazione From the Front</p>
+                <p class="ftf__text-item">via Caravaggio 36</p>
+                <p class="ftf__text-item">40033 Casalecchio di Reno (BO) Italy</p>
+                <p class="ftf__text-item">C.F. 91344080378</p>
+            </div>
+        </div>
+
+         <div class="footer__section footer--right">
+            <p class="made">made with <span class="made__heart">♥</span> in Italy by&ensp;<a href="http://mced.it/" class="footer__link"><img class="footer__img" src="../images/mced.png" alt="MCED"></a></p>
+            <p class="privacy">
+                
+                <a href="../en/the-code-of-conduct.html" class="privacy__link">Code of conduct</a>
+                &mdash; 
+                <a class="privacy__link" href="https://www.iubenda.com/privacy-policy/155299">
+                    Privacy
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+      <script src="javascripts/home.js" type="text/javascript"></script>
+      <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/1707.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+    </div>
+  </body>
+</html>

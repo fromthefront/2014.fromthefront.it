@@ -1,0 +1,28 @@
+<div class="opening__wrapper">
+    <section class="opening bokeh-bg with-mountains">
+    
+        <header class="large-head">
+            <%= partial "banner" %>
+            <section class="info">
+                <h2 class="info__title"><%= t(:frontend) %></h2>
+                <p class="info__when"><%= t(:date) %></p>
+                <p class="info__where">Teatro Duse, Bologna, <%= t(:italy) %></p>
+            </section>
+        </header>
+
+        <%= partial "plane" %>
+        <section class="message">
+            <h2 class="message__title">
+                <%= t(:msg1) %><br>
+                <strong><%= t(:msg2) %></strong>
+            </h2>
+        </section>
+        <div class="action">
+
+            <a class="button action__button" href="#tickets"><%= t(:getyourticket) %>!</a>
+            <div class="social-buttons">
+                <%= partial "social-buttons" %>
+            </div>
+        </div>
+    </section>
+</div>

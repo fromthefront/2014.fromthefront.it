@@ -1,0 +1,41 @@
+<article class="homespeakers">
+    <div class="row homespeakers__inner">
+    <header class="homespeakers__header">
+    <div class="ribbon">
+      <h1 class="homespeakers__inner ribbon__content"><span class="homespeakers__small"><%= t(:conference) %></span><br> <%= t(:starring) %></h1>
+    </div>
+      <p class="homespeakers__when"><%= t(:moredate) %></p>
+      <p class="homespeakers__what"><%= t(:what) %></p>
+    </header>
+        <ul class="speaker-grid">
+            <% blog(I18n.locale.to_s).articles.select {|a| a.tags.include?("speakers") }.each do |article| 
+              slug = article.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')  
+              %>
+              <li class="speaker-ongrid">
+                  <% if I18n.locale == :it %>
+                    <a href="/it/speakers.html#<%= slug %>">
+                  <% else %>
+                    <a href="/speakers.html#<%= slug %>">
+                  <% end %>
+                    <div class="placeholder position-<%= article.data.position %>"></div>
+                  </a>
+                  <% if article.tags.include?("tba") %>
+                  <h2 class="speaker-ongrid__name speaker-ongrid__name--tba">
+                      To be announced
+                  </h2>
+                  <% else %>
+                      <h2 class="speaker-ongrid__name">
+                          <%= article.title %>
+                      </h2>
+                      <p class="speaker-ongrid__info"><%= article.data.shortbio %></p>
+                      <a href="http://twitter.com/<%= article.data.twitter %>" class="speaker-ongrid__twitter">@<%= article.data.twitter %></a>
+                      <p class="speaker-ongrid__info">&ndash; <%= article.data.country %> &ndash;</p>
+                  <% end %>
+              </li>
+              <% end %>
+        </ul>
+    </div>
+</article>
+<div class="bacarozzi">
+  <p class="bacarozzi__text">“<%= t(:quote) %>”</p>
+</div>

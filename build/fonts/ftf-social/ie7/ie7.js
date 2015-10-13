@@ -1,0 +1,1 @@
+!function(){function n(n,e){var o=n.innerHTML;n.innerHTML="<span style=\"font-family: 'ftf-social'\">"+e+"</span>"+o}var e,o,i,a={"icon-vimeo":"&#xe600;","icon-twitter":"&#xe601;","icon-facebook":"&#xe602;","icon-arrow-right":"&#xe603;",0:0},t=document.getElementsByTagName("*");for(e=0;i=t[e],i;e+=1)o=i.className,o=o.match(/icon-[^\s'"]+/),o&&a[o[0]]&&n(i,a[o[0]])}();

@@ -1,0 +1,13 @@
+.js {
+    &.ready {
+        .opening {
+           @extend %a-movebg;
+        }
+    }
+}
+
+// plane
+.plane-container {
+    @extend %a-come-in;
+    transform:scale(0) translateZ(0); opacity:0.2;
+}

@@ -1,0 +1,124 @@
+%section {
+    @include grid-column(
+    $columns:12,
+    $collapse:true
+  );
+}
+
+// small-header
+.small-header {
+    position:relative;
+    overflow: hidden;
+    background:$black;
+    text-align:center;
+    padding:1rem 1rem 2rem;
+
+    @media #{$medium-up} {
+        text-align:right;
+    }
+
+    @media #{$large-up} {
+        text-align:center;
+        //display: flex;
+        //align-items: center;
+        //justify-content: space-around;
+    }
+
+    .banner {
+        margin-top:0;
+        @extend %bg-black;
+        @include grid-column(
+            $columns:12
+        );
+
+        @media #{$medium-up} {
+            @include grid-column(
+                $columns:4
+            );
+        }
+
+        @media #{$large-up} {
+            @include grid-column(
+                $columns:2
+            );
+        }
+    }
+
+    .banner__img {
+        max-height:9rem;
+    }
+
+    &:after {
+        @include mountain-border();
+        background-color:$grey;
+    }
+
+}
+
+.flexbox {
+    .small-header__inner {
+        @media #{$large-up} {
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+        }
+    }
+}
+
+.small-header--tiny {
+    padding-top:0;
+}
+
+
+.small-header__title {
+    @include section-title($white, 3px);
+    font-size:rem-calc(23);
+    margin-top:1rem;
+
+    @media #{$large-up} {
+        font-size:rem-calc(37);
+        letter-spacing:1px;
+    }
+}
+
+ .small-header__ticket {
+        margin: 1rem 0 0 auto;
+        max-width:15rem;
+        @media #{$large-up} {
+            margin:1rem 0;
+            float:right;
+        }
+    }
+
+// page
+
+.page {
+    //margin-bottom:5rem;
+    padding-bottom:7rem;
+    background-color:$grey;
+    overflow: hidden;
+    @include headings {
+        color:$white;
+    }
+    color:$white;
+}
+
+// special
+
+body.index {
+    .footer__inner {
+        border-top:4px solid $black;
+    }
+}
+
+body.speakers, 
+body.schedule,
+body.location,
+body.it_location {
+    background:$black;
+}
+
+
+.relative {
+    position:relative;
+}

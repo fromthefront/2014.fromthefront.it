@@ -1,0 +1,59 @@
+
+// abstract page
+
+.abstract {
+    @include grid-column(
+        $columns:12,
+        $center:true
+    );
+    background:$grey;
+    color:$white;
+    position:relative;
+
+    @include headings() {
+        color:$darkYellow;
+    }
+}
+
+.abstract__inner {
+    @include speakerGrid();
+    margin:3rem auto 5rem; 
+}
+
+
+.abstract__title {
+    text-transform:uppercase;
+    line-height:1.2;
+    font-weight:700;
+    font-size:rem-calc(23);
+
+    @media #{$medium-up} {
+        font-size:rem-calc(27);
+    }
+}
+
+.abstract__text {
+    p {
+        margin-bottom: 0;
+        font-size:1rem;
+
+        @media #{$large-up} {
+            font-size:rem-calc(18);
+        }
+    }
+    p+p {
+        text-indent: 0.45rem;
+    }
+    @media #{$large-up} {
+        columns:2;
+    }
+}
+
+.abstract__meta {
+        font-size: rem-calc(14px);
+        text-transform:uppercase;
+}
+
+.abstract__date {
+    color: $sky;    
+}

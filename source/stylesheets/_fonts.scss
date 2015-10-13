@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'fedora';
+    src: url('../fonts/sf_fedora_titles_italic/sf_fedora_titles_italic-webfont.eot');
+    src: url('../fonts/sf_fedora_titles_italic/sf_fedora_titles_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sf_fedora_titles_italic/sf_fedora_titles_italic-webfont.woff') format('woff'),
+         url('../fonts/sf_fedora_titles_italic/sf_fedora_titles_italic-webfont.ttf') format('truetype'),
+         url('../fonts/sf_fedora_titles_italic/sf_fedora_titles_italic-webfont.svg#sf_fedora_titlesitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ftf-social';
+    src:url('../fonts/ftf-social/fonts/ftf-social.eot?o5j1s');
+    src:url('../fonts/ftf-social/fonts/ftf-social.eot?#iefixo5j1s') format('embedded-opentype'),
+        url('../fonts/ftf-social/fonts/ftf-social.woff?o5j1s') format('woff'),
+        url('../fonts/ftf-social/fonts/ftf-social.ttf?o5j1s') format('truetype'),
+        url('../fonts/ftf-social/fonts/ftf-social.svg?o5j1s#ftf-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'ftf-social';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vimeo:before {
+    content: "\e600";
+}
+.icon-twitter:before {
+    content: "\e601";
+}
+.icon-facebook:before {
+    content: "\e602";
+}
+.icon-arrow-right:before {
+    content: "\e603";
+}

@@ -1,0 +1,92 @@
+<style>
+
+.newsite, .spacer{
+  position: fixed; text-align: center; z-index: 10000; width: 100%;
+   text-align:center; font-size:140%;top:0;
+  background:#F6B323;
+  padding:20px 0;
+}
+.newsite a {
+  color:#000;text-decoration: underline;
+}
+.newsite a:hover {
+  color: #c9450d!important;
+}
+.spacer {
+  position: relative;
+  visibility: hidden;
+}
+</style>
+<div class="spacer">
+  You're gonna get killed chasing after your damn fortune and glory! <span>Maybe. But not today.</span>
+</div>
+
+<div class="newsite">
+  You're gonna get killed chasing after your damn fortune and glory! <a href="http://2015.fromthefront.it">Maybe. But not today.</a>
+</div>
+
+<nav class="top-bar" id="top-bar">
+  <ul class="title-area">
+    <li class="name">
+    <% link_to '/' do %>
+            <%= image_tag '../images/ftf-square-black.png', :alt => 'From the Front',
+           :class => 'top-bar__img' %>
+        <% end %>
+    </li>
+    <li class="toggle-topbar menu-icon"><a id="top-bar__toggle" class="top-bar__toggle" href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- left Nav Section -->
+    <ul class="left">
+      <li class="top-bar-section__item">
+        <% if I18n.locale == :it %>
+          <a href="/it/">
+        <% else %>
+          <a href="/">
+        <% end %>
+          Home
+        </a>
+      </li>
+
+      <li class="top-bar-section__item">
+        <% if I18n.locale == :it %>
+          <a href="/it/speakers.html">
+        <% else %>
+          <a href="/speakers.html">
+        <% end %>
+            <%= t(:speakers) %>
+          </a>
+      </li>
+
+       <li class="top-bar-section__item">
+        <% if I18n.locale == :it %>
+          <a href="/it/schedule.html">
+        <% else %>
+          <a href="/schedule.html">
+        <% end %>
+            <%= t(:schedule) %>
+          </a>
+      </li>
+
+      <li class="top-bar-section__item">
+        <% if I18n.locale == :it %>
+          <a href="/it/location.html">
+        <% else %>
+          <a href="/location.html">
+        <% end %>
+            <%= t(:venue) %>
+          </a>
+      </li>
+
+      <li class="top-bar-section__item">
+        <a class="top-bar-section__link" href="#tickets">
+          <%= t(:tickets) %>
+        </a>
+      </li>
+
+    </ul>
+
+  </section>
+</nav>

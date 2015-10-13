@@ -1,0 +1,85 @@
+@mixin action-button($bg, $color) {
+    border-radius:1em;
+    text-transform: uppercase;
+    background-color:$bg;
+    color:$color;
+}
+
+@mixin center-el() {
+    margin-left: auto;
+    margin-right:auto;
+    float:none !important;
+    display:block;
+}
+
+@mixin section-title($color, $line) {
+    color:$color;
+    border-top:$line solid currentColor;
+    border-bottom:$line solid currentColor;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    display:inline-block;
+    line-height: 1.5;
+}
+
+
+@mixin mountain-border(){
+    background-image: url("../images/mountain-border.svg");
+    background-repeat: repeat-x;
+
+    content: "";
+    display: inline-block;
+    width: 100%;
+    @include position(absolute, left 0 bottom 0 right 0);
+    height:rem-calc(20);
+};
+
+@mixin justify($mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: $mode;
+     -moz-hyphens: $mode;
+      -ms-hyphens: $mode; // IE10+
+       -o-hyphens: $mode;
+          hyphens: $mode;
+  text-align:justify;
+}
+
+@mixin position($position, $args) {
+    position: $position;
+    $offsets: top right bottom left;
+
+    @each $o in $offsets {
+        $i: index($args, $o);
+
+        @if $i
+        and $i + 1 <= length($args)
+        and type-of( nth($args, $i + 1) ) == number {
+            #{$o}: nth($args, $i + 1);
+        }
+    }
+}
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
+
+@mixin animation($name, $dur: $duration, $iter: $iteration, $tim: $timing, $del: $delay){
+  animation-name: $name;
+  animation-duration: $dur;
+  animation-iteration-count: $iter;
+  animation-timing-function: $tim;
+  animation-delay: $del;
+}
+
+@mixin sloopy-container($deg) {
+  width:135%;
+  transform:rotate($deg) translateX(-13%) translateY(-49%);
+  position:relative;
+}
+@mixin sloopy-inner($deg) {
+  transform:rotate($deg);
+}
